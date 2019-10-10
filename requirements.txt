@@ -1,0 +1,15 @@
+pymongo
+psycopg2
+unittest
+os
+sys
+json
+logging
+spacy
+nltk
+matplotlib
+numpy
+datetime
+sshtunnel
+igraph
+pandas

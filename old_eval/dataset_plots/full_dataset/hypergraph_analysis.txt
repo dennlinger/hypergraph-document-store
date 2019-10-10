@@ -1,0 +1,48 @@
+
+Number of documents in hyperedge_document: 2746875
+Number of documents in entity_hyperedge_document: 2746875
+Reduction of values by 0.00 %
+
+Number of documents in hyperedge_sentences: 12896220
+Number of documents in entity_hyperedge_sentences: 12896220
+Reduction of values by 0.00 %
+
+Number of hyperedge occurrences in hyperedges: 135120296
+Number of hyperedge occurrences in entity_hyperedges: 11843375
+Reduction of values by 91.23 %
+
+Edge size analysis
+Results for hyperedges
+	Mean: 49.1915
+	Median: 49.0000
+	75-percentile: 60.0000
+	99-Percentile: 91.0000
+	Minimum: 1
+	Maximum: 849
+Results for entity_hyperedges
+	Mean: 4.6448
+	Median: 4.0000
+	75-percentile: 6.0000
+	99-Percentile: 13.0000
+	Minimum: 1
+	Maximum: 82
+
+Term frequency analysis (in edges)
+Results for hyperedges
+	Mean: 346.0311
+	Median: 10.0000
+	75-percentile: 30.0000
+	99-Percentile: 5931.0000
+	Minimum: 1
+	Maximum: 1388921
+Results for entity_hyperedges
+	Mean: 96.9553
+	Median: 10.0000
+	75-percentile: 21.0000
+	99-Percentile: 1044.0000
+	Minimum: 1
+	Maximum: 358699
+
+Number of empty hyperedges:
+Results for hyperedges: 51
+Results for entity_hyperedges: 197063

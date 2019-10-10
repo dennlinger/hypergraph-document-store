@@ -1,0 +1,68 @@
+Number of sentences: 3088151
+Number of documents: 127485
+Number of terms: 416001
+Number of entities: 130576
+Number of term occurrences: 35454441
+Number of entity occurrences: 3498333
+
+Longest document by number of sentences was doc_id 52795, with 293 sentences.
+Average document length by number of sentences was 24.2236 sentences.
+Associated standard deviation was 17.8892.
+Median document length by number of sentences was 20.0 sentences.
+75 percentile of document length by number of sentences was 32.0 sentences.
+99 percentile of document length by number of sentences was 85.0 sentences.
+
+Longest sentence by characters was 5399 characters long.
+Average sentence by character length: 124.4277 characters.
+Associated standard deviation was 77.1371.
+Median sentence by character length: 117.0 characters.
+75 percentile of sentence by character length: 169.0 characters.
+99 percentile of sentence by character length: 321.0 characters.
+
+Longest sentence by number of tokens was 789 tokens.
+Average sentence by number of tokens was 20.6451 tokens.
+Associated standard deviation was 12.4353.
+Median sentence by number of tokens was 20.0 tokens.
+75 percentile of sentence by tokens was 28.0 tokens.
+99 percentile of sentence by tokens was 53.0 tokens.
+
+Number of documents per document feed:
+[('WP', 30434),
+ ('SMH', 16683),
+ ('independent', 12258),
+ ('Reuters', 11599),
+ ('telegraph', 9441),
+ ('CBS', 8939),
+ ('CNN', 7658),
+ ('USAtoday', 6174),
+ ('IBTimes', 6131),
+ ('NYTimes', 5439),
+ ('guardian', 4313),
+ ('Skynews', 4248),
+ ('LATimes', 2378),
+ ('bbc', 1790)]
+
+Longest document by term occurrences: 1947 occurrences
+Average document length by term occurrences: 278.1068 terms
+Median document length by term occurrences: 238.0 terms
+75 percentile of document length by term occurrences: 374.0 terms
+99 percentile of document length by term occurrences: 855.1600 terms
+
+Average sentence length by term occurrences: 18.0658 terms
+Median sentence length by term occurrences: 13.0 terms
+75 percentile of sentence length by term occurrences: 25.0 terms
+99 percentile of sentence length by term occurrences: 84.0 terms
+
+Most occurring terms was 'said' with 494517 occurrences.
+Average number of terms occurrences was 85.2270.
+Associated standard deviation was 1648.3399.
+Median number of terms occurrences was 2.0.
+75 percentile for number of terms occurrences was 7.0000.
+99 percentile for number of terms occurrences was 1393.0000.
+
+Most occurring entities was 'Donald Trump' with 158693 occurrences.
+Average number of entities occurrences was 26.7915.
+Associated standard deviation was 704.1269.
+Median number of entities occurrences was 2.0.
+75 percentile for number of entities occurrences was 5.0000.
+99 percentile for number of entities occurrences was 278.0000.

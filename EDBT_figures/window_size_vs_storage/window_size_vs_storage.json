@@ -1,0 +1,56 @@
+{
+  "0": {
+    "implicit_neo4j": 2690012165,
+    "explicit_neo4j": 3468311936,
+    "explicit_entity_neo4j": 1339975908,
+    "dyadic_entity_neo4j": 1530962123,
+    "implicit": 3630448640,
+    "explicit_entity": 1261182976,
+    "dyadic_entity": 1336172544,
+    "explicit": 4000743424
+  },
+  "1": {
+    "implicit_neo4j": 2690012165,
+    "explicit_neo4j": 8241237296,
+    "explicit_entity_neo4j": 1956521164,
+    "dyadic_entity_neo4j": 4270379001,
+    "implicit": 3630448640,
+    "explicit_entity": 2227208192,
+    "dyadic_entity": 3931185152,
+    "explicit": 10226163712
+  },
+  "2": {
+    "implicit_neo4j": 2690012165,
+    "explicit_neo4j": 12854556574,
+    "explicit_entity_neo4j": 2540286880,
+    "dyadic_entity_neo4j": 8831729667,
+    "implicit": 3630448640,
+    "explicit_entity": 3177013248,
+    "dyadic_entity": 8095260672,
+    "explicit": 16127303680
+  },
+  "5": {
+    "implicit_neo4j": 2690012165,
+    "explicit_neo4j": 25225026333,
+    "explicit_entity_neo4j": 4136164818,
+    "dyadic_entity_neo4j": 30798453645,
+    "implicit": 3630448640,
+    "explicit_entity": 5632180224,
+    "dyadic_entity": 27640553472,
+    "explicit": 33733853184
+  },
+  "10": {
+    "implicit_neo4j": 2690012165,
+    "explicit_entity_neo4j": 6303370299,
+    "dyadic_entity_neo4j": 82266558000,
+    "implicit": 3630448640,
+    "explicit_entity": 8978366464,
+    "dyadic_entity": 72794087424
+  },
+  "20": {
+    "implicit_neo4j": 2690012165,
+    "explicit_entity_neo4j": 9119098846,
+    "implicit": 3630448640,
+    "explicit_entity": 13271261184
+  }
+}

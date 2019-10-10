@@ -1,0 +1,20 @@
+IGRAPH UNW- 390486 211212842 -- 
++ attr: name (v), weight (e)
+()
+Number of vertices: 390486
+Number of edges: 211212842
+()
+Average uweighted degree: 1081.00
+Maximum unweighted degree: 328504
+Average weighted degree: 18831.16
+Maximum weighted degree: 72046760
+()
+Number of same elements in Top 50 degrees: 40
+Average Local Clustering Coefficient: 0.8747
+Global Clustering Coefficient: 0.1684
+()
+Number of components: 1
+Fraction of elements in giant component: 100.00%
+Diameter of giant component: 8
+()
+Assortativity Coefficient: -0.2908
