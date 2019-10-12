@@ -45,7 +45,9 @@
     "dyadic_entity_neo4j": 82266558000,
     "implicit": 3630448640,
     "explicit_entity": 8978366464,
-    "dyadic_entity": 72794087424
+    "dyadic_entity": 72794087424,
+    "explicit": 54840926208,
+    "explicit_neo4j": 38097074624
   },
   "20": {
     "implicit_neo4j": 2690012165,

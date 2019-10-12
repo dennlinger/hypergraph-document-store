@@ -10,10 +10,10 @@ import json
 
 if __name__ == "__main__":
 
-    plt.rc('axes', titlesize=16)
-    plt.rc('axes', labelsize=16)
-    plt.rc('xtick', labelsize=14)
-    plt.rc('ytick', labelsize=14)
+    plt.rc('axes', titlesize=26)
+    plt.rc('axes', labelsize=26)
+    plt.rc('xtick', labelsize=24)
+    plt.rc('ytick', labelsize=24)
 
     with open("entities.json") as f:
         data = json.load(f)
@@ -35,13 +35,12 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, x_bins=bins, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -51,8 +50,8 @@ if __name__ == "__main__":
     plt.xticks([0, 1000, 2000, 3000, 4000, 5000, 6000], [])
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
-    plt.savefig("_deg_vs_time_implicit.pdf", dpi=300)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
+    plt.savefig("_deg_vs_time_implicit.png", dpi=300)
     plt.show()
 
 
@@ -69,11 +68,10 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -83,8 +81,8 @@ if __name__ == "__main__":
     plt.xticks([0, 1000, 2000, 3000, 4000, 5000, 6000], [])
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
-    plt.savefig("_deg_vs_time_explicit.pdf", dpi=300)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
+    plt.savefig("_deg_vs_time_explicit.png", dpi=300)
     plt.show()
 
 
@@ -104,13 +102,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, x_bins=bins, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -120,8 +117,8 @@ if __name__ == "__main__":
     plt.xticks([0, 1000, 2000, 3000, 4000, 5000, 6000], [])
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
-    plt.savefig("_deg_vs_time_implicit_entity.pdf", dpi=300)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
+    plt.savefig("_deg_vs_time_implicit_entity.png", dpi=300)
     plt.show()
 
 
@@ -141,13 +138,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, x_bins=bins, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -155,10 +151,10 @@ if __name__ == "__main__":
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
     plt.xticks([0, 1000, 2000, 3000, 4000, 5000, 6000], [])
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
-    plt.savefig("_deg_vs_time_explicit_entity.pdf", dpi=300)
+    plt.savefig("_deg_vs_time_explicit_entity.png", dpi=300)
     plt.show()
 
 
@@ -177,21 +173,20 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
     # plt.xlabel("Degree")
     plt.ylabel("Execution time in ms")
     plt.xlabel("")
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
     plt.xticks([0, 1000, 2000, 3000, 4000, 5000, 6000], [])
-    plt.savefig("_deg_vs_time_dyadic_entity.pdf", dpi=300)
+    plt.savefig("_deg_vs_time_dyadic_entity.png", dpi=300)
     plt.show()
 
     #####################
@@ -213,22 +208,21 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, x_bins=bins, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
-    plt.savefig("_deg_vs_time_implicit_neo4j.pdf", dpi=300)
+    plt.savefig("_deg_vs_time_implicit_neo4j.png", dpi=300)
     plt.show()
 
     vals = []
@@ -244,20 +238,19 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
-    plt.savefig("_deg_vs_time_explicit_neo4j.pdf", dpi=300)
+    plt.savefig("_deg_vs_time_explicit_neo4j.png", dpi=300)
     plt.show()
 
 
@@ -277,22 +270,21 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, x_bins=bins, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
-    plt.savefig("_deg_vs_time_implicit_entity_neo4j.pdf", dpi=300)
+    plt.savefig("_deg_vs_time_implicit_entity_neo4j.png", dpi=300)
     plt.show()
 
 
@@ -312,22 +304,21 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, x_bins=bins, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
     plt.yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000], [])
-    plt.savefig("_deg_vs_time_explicit_entity_neo4j.pdf", dpi=300)
+    plt.savefig("_deg_vs_time_explicit_entity_neo4j.png", dpi=300)
     plt.show()
 
 
@@ -346,17 +337,16 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10"])
 
-    bins = [1, 2, 3, 4, 5, 10, 20, 50, 80, 100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500]
-    seaborn.regplot("degree", "time0", df, x_bins=bins, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, x_bins=bins, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, x_bins=bins, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, x_bins=bins, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, x_bins=bins, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
     plt.xlabel("Degree")
     plt.ylabel("Execution time in ms")
     plt.xlim([0, 6500])
     plt.ylim([0, 4000])
     # plt.legend(loc="upper left")
-    plt.subplots_adjust(left=0.14, bottom=0.13, right=0.97, top=0.97)
-    plt.savefig("_deg_vs_time_dyadic_entity_neo4j.pdf", dpi=300)
+    plt.subplots_adjust(left=0.215, bottom=0.175, right=0.997, top=0.974)
+    plt.savefig("_deg_vs_time_dyadic_entity_neo4j.png", dpi=300)
     plt.show()
