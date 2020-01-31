@@ -11,7 +11,7 @@ Figures 4 and 5, including all relevant evaluation data, can be found in the fol
 To see which entities were evaluated specifically, see the `entities.json` in the `runtime_eval` subfolder.
 
 ### Data Definition
-For Postgres, see the definition in `docker/base11/createDBSchema.sql`, as well as `GenerateNewSchema.py` and `GenerateDyadicSQL.py`. <br/>
+For Postgres, we list the various schemata in `Schema.md`, also see the definition in `docker/base11/createDBSchema.sql`, as well as `GenerateNewSchema.py` and `GenerateDyadicSQL.py`. <br/>
 For Neo4j, see the `Neoj4` subfolder, which contains definitions for the respective models. Note that in Neo4j we need to create a temporary copy of the SQL tables due to the lack of composite primary keys in Neo4j.
 
 ### Query implementations
