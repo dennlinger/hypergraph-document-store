@@ -1,5 +1,5 @@
 # A Versatile Hypergraph Model for Document Collections
-### EDBT 2020 Submission by Andreas Spitz (1), Dennis Aumiller (2), Bálint Soproni (2) and Michael Gertz (2)
+### SSDBM 2020 Submission by Andreas Spitz (1), Dennis Aumiller (2), Bálint Soproni (2) and Michael Gertz (2)
 (1) EPFL, Lausanne, Switzerland <br/>
 (2) Heidelberg University, Heidelberg, Germany
 
@@ -7,7 +7,7 @@ This repository contains the main code, including all relevant results to reprod
 
 
 ### Reproducing Figures from the Paper
-Figures 4 and 5, including all relevant evaluation data, can be found in the folder `EDBT_figures`; subfolders `document_vs_storage` and `window_size_vs_storage` are for Figure 4, and contain JSON files with the respective sizes.<br/>
+Figures 4 and 5, including all relevant evaluation data, can be found in the folder `SSDBM_figures`; subfolders `document_vs_storage` and `window_size_vs_storage` are for Figure 4, and contain JSON files with the respective sizes.<br/>
 To see which entities were evaluated specifically, see the `entities.json` in the `runtime_eval` subfolder.
 
 ### Data Definition

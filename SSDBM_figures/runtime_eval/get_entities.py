@@ -2,7 +2,7 @@
 Gets n entities and their respective degrees.
 """
 
-from PostgresConnector_EDBT import PostgresConnector
+from PostgresConnector_SSDBM import PostgresConnector
 import numpy as np
 import json
 
