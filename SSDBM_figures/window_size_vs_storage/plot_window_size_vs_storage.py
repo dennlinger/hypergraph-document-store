@@ -42,15 +42,15 @@ if __name__ == "__main__":
     # plt.ylim(1, 80)
     plt.yscale("log")
 
-    plt.plot(x, y_implicit, marker="o", color="#a6cee3", label="Implicit Full PSQL")
-    plt.plot(x[:5], y_explicit, marker="o", color="#1f78b4", label="Explicit Full PSQL")
-    plt.plot(x, y_explicit_entity, marker="o", color="#1f78b4", linestyle="dashed", label="Explicit Entity PSQL")
-    plt.plot(x[:5], y_dyadic_entity, marker="o", color="#b2df8a", linestyle="dashed", label="Dyadic Entity PSQL")
+    plt.plot(x, y_implicit, marker="o", color="#00996a", label="Implicit Full PSQL")
+    plt.plot(x[:5], y_explicit, marker="o", color="#460d80", label="Explicit Full PSQL")
+    plt.plot(x, y_explicit_entity, marker="o", color="#460d80", linestyle="dashed", label="Explicit Entity PSQL")
+    plt.plot(x[:5], y_dyadic_entity, marker="o", color="#ffa82d", linestyle="dashed", label="Dyadic Entity PSQL")
 
-    plt.plot(x, y_implicit_neo4j, marker="^", color="#a6cee3", label="Implicit Full Neo4j")
-    plt.plot(x[:5], y_explicit_neo4j, marker="^", color="#1f78b4", label="Explicit Full Neo4j")
-    plt.plot(x, y_explicit_entity_neo4j, marker="^", color="#1f78b4", linestyle="dashed", label="Explicit Entity Neo4j")
-    plt.plot(x[:5], y_dyadic_entity_neo4j, marker="^", color="#b2df8a", linestyle="dashed", label="Dyadic Entity Neo4j")
+    plt.plot(x, y_implicit_neo4j, marker="^", color="#00996a", label="Implicit Full Neo4j")
+    plt.plot(x[:5], y_explicit_neo4j, marker="^", color="#460d80", label="Explicit Full Neo4j")
+    plt.plot(x, y_explicit_entity_neo4j, marker="^", color="#460d80", linestyle="dashed", label="Explicit Entity Neo4j")
+    plt.plot(x[:5], y_dyadic_entity_neo4j, marker="^", color="#ffa82d", linestyle="dashed", label="Dyadic Entity Neo4j")
 
     plt.xticks([0, 1, 2, 5, 10, 20])
     plt.legend(ncol=1)
