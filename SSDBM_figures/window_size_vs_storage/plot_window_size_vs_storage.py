@@ -3,10 +3,12 @@ Plot the results in a similar fashion to document-vs-storage.
 """
 
 import matplotlib.pyplot as plt
+import matplotlib
 import json
 
 if __name__ == "__main__":
-
+    matplotlib.rcParams['pdf.fonttype'] = 42
+    matplotlib.rcParams['ps.fonttype'] = 42
     plt.rc('axes', titlesize=16)
     plt.rc('axes', labelsize=16)
     plt.rc('xtick', labelsize=14)

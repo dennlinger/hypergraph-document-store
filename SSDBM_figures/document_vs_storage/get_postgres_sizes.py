@@ -2,7 +2,7 @@
 Retrieves sizes of the different models for varying sizes.
 """
 
-from PostgresConnector_EDBT import PostgresConnector
+from PostgresConnector_SSDBM import PostgresConnector
 import json
 
 

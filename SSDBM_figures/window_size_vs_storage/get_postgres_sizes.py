@@ -2,7 +2,7 @@
 Get sizes from the postgres tables. Also has to create remaining missing indices.
 """
 
-from PostgresConnector_EDBT import PostgresConnector
+from PostgresConnector_SSDBM import PostgresConnector
 from collections import defaultdict
 import psycopg2 as pg2
 import json

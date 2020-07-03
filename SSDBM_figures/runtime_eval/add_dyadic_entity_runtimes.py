@@ -2,7 +2,7 @@
 Attempt at a first template script to evaluate runtimes for the dyadic_entity model in Postgres.
 """
 
-from PostgresConnector_EDBT import PostgresConnector
+from PostgresConnector_SSDBM import PostgresConnector
 import json
 
 
