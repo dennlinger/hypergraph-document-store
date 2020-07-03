@@ -9,6 +9,37 @@ import seaborn
 import json
 
 if __name__ == "__main__":
+    
+    c0 = "#ffa82d"
+    c1 = "#da893d"
+    c2 = "#b56a4e"
+    c5 = "#904b5e"
+    c10 = "#6b2c6f"
+    c20 = "#460d80"
+
+    # # Reverse Order
+    # c20 = "#ffa82d"
+    # c10 = "#da893d"
+    # c5 = "#b56a4e"
+    # c2 = "#904b5e"
+    # c1 = "#6b2c6f"
+    # c0 = "#460d80"
+
+    # # Reverse Order Alternative
+    # c20 = "#ffa82d"
+    # c10 = "#9ee525"
+    # c5 = "#1dcc38"
+    # c2 = "#17b2a8"
+    # c1 = "#113899"
+    # c0 = "#460d80"
+
+    # # Alternative
+    # c0 = "#ffa82d"
+    # c1 = "#9ee525"
+    # c2 = "#1dcc38"
+    # c5 = "#17b2a8"
+    # c10 = "#113899"
+    # c20 = "#460d80"
 
     plt.rc('axes', titlesize=26)
     plt.rc('axes', labelsize=26)
@@ -35,12 +66,12 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color=c20)
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -68,10 +99,10 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -102,12 +133,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color=c20)
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -138,12 +169,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color=c20)
     # plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -173,11 +204,11 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
     # plt.xlabel("Degree")
     plt.ylabel("Execution time in ms")
     plt.xlabel("")
@@ -208,12 +239,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color=c20)
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
@@ -238,10 +269,10 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
@@ -270,12 +301,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color=c20)
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
@@ -304,12 +335,12 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10", "time20"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
-    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color="#e31a1c")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
+    seaborn.regplot("degree", "time20", df, ci=95, label="Window 20", marker=".", color=c20)
     plt.xlabel("Degree")
     # plt.ylabel("Execution time in ms")
     plt.ylabel("")
@@ -337,11 +368,11 @@ if __name__ == "__main__":
     df = pd.DataFrame(vals, columns=["degree", "time0", "time1", "time2", "time5",
                                      "time10"])
 
-    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color="#a6cee3")
-    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color="#1f78b4")
-    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color="#b2df8a")
-    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color="#33a02c")
-    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color="#fb9a99")
+    seaborn.regplot("degree", "time0", df, ci=95, label="Window 0", marker=".", color=c0)
+    seaborn.regplot("degree", "time1", df, ci=95, label="Window 1", marker=".", color=c1)
+    seaborn.regplot("degree", "time2", df, ci=95, label="Window 2", marker=".", color=c2)
+    seaborn.regplot("degree", "time5", df, ci=95, label="Window 5", marker=".", color=c5)
+    seaborn.regplot("degree", "time10", df, ci=95, label="Window 10", marker=".", color=c10)
     plt.xlabel("Degree")
     plt.ylabel("Execution time in ms")
     plt.xlim([0, 6500])
